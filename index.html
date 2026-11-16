@@ -250,6 +250,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
   box-shadow: none;
   border-radius: 0;
 }
+
+/* The public site uses a custom cursor and hides the native cursor. Restore a
+   visible, usable cursor while the admin console is open (overlay is above it). */
+#adminOverlay, #adminOverlay * { cursor: auto !important; }
+#adminOverlay button, #adminOverlay a, #adminOverlay select { cursor: pointer !important; }
+#adminOverlay input:not([type="hidden"]), #adminOverlay textarea { cursor: text !important; }
+#adminOverlay input:focus, #adminOverlay textarea:focus, #adminOverlay select:focus {
+  outline: 2px solid #22c7ff !important;
+  outline-offset: 2px;
+}
 </style>
 <noscript><style>#loader{display:none!important}</style></noscript>
 </head>
@@ -506,7 +516,7 @@ requestForm.addEventListener('submit',function(e){e.preventDefault();var f=new F
   document.getElementById('closeAdmin').addEventListener('click',closePanel);
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePanel()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open'))closePanel()});
-  document.getElementById('adminLoginForm').addEventListener('submit',async function(e){e.preventDefault();say(loginStatus,'Signing in…');if(!configured()){say(loginStatus,'Supabase is not configured yet. Follow the setup instructions included with the download.');return;}initClient();var r=await client.auth.signInWithPassword({email:document.getElementById('adminEmail').value.trim(),password:document.getElementById('adminPassword').value});if(r.error){say(loginStatus,r.error.message);return;}say(loginStatus,'');showManager();});
+  document.getElementById('adminLoginForm').addEventListener('submit',async function(e){e.preventDefault();say(loginStatus,'Signing in…');if(!configured()){say(loginStatus,'Supabase is not configured yet. Follow the setup instructions included with the download.');return;}initClient();var r=await client.auth.signInWithPassword({email:document.getElementById('adminEmail').value.trim(),password:document.getElementById('adminPassword').value});if(r.error){var msg=r.error.message||'Sign-in failed.';if(msg.toLowerCase().includes('invalid login credentials'))msg='Invalid email or password. Confirm the user exists in this Supabase project and reset/set its password in Authentication → Users, then try again.';say(loginStatus,msg);return;}say(loginStatus,'');showManager();});
   document.getElementById('signOutAdmin').addEventListener('click',async function(){if(client)await client.auth.signOut();projectForm.reset();document.getElementById('projectId').value='';showLogin();say(loginStatus,'You have signed out.');});
   function resetForm(){projectForm.reset();document.getElementById('projectId').value='';document.getElementById('projectFormTitle').textContent='Add project details';document.getElementById('saveProjectBtn').textContent='PUBLISH PROJECT ↗';say(projectStatus,'');editingId=null;}
   document.getElementById('resetProjectForm').addEventListener('click',resetForm);
