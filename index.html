@@ -127,6 +127,28 @@ h2:after{content:"";display:block;width:72px;height:2px;margin-top:16px;backgrou
 #why .why div:nth-child(1){transition-delay:.3s}#why .why div:nth-child(2){transition-delay:.7s}#why .why div:nth-child(3){transition-delay:1.1s}#why .why div:nth-child(4){transition-delay:1.5s}
 .why h3{font-size:21px;margin-bottom:4px}.why p{margin:0;color:var(--muted)}
 
+/* SMART SERVICE REQUEST */
+.hero-promise{font:500 14px/1.65 Inter,sans-serif!important;color:#9DB4D4!important;margin:22px 0 0!important;max-width:55ch!important}
+.hero-promise span{color:var(--sky);font-size:20px;margin-right:8px}
+#enquiry{gap:16px}
+#enquiry .form-intro{padding:18px;border:1px solid rgba(34,199,255,.22);border-radius:14px;background:linear-gradient(120deg,rgba(30,91,255,.13),rgba(34,199,255,.04))}
+#enquiry .form-intro strong{display:block;color:#fff;font:600 20px 'Space Grotesk',sans-serif;margin-bottom:5px}
+#enquiry .form-intro span{display:block;color:var(--muted);font-size:14px}
+#enquiry .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#enquiry .field-grid label{min-width:0}
+#enquiry .step-label{display:flex;align-items:center;gap:9px;color:#fff;font:700 12px Orbitron,sans-serif;letter-spacing:.12em;margin-top:5px}
+#enquiry .step-label span{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:rgba(34,199,255,.13);border:1px solid rgba(34,199,255,.35);color:var(--sky)}
+#enquiry .hint{font-size:12px;color:var(--muted);margin-top:-8px}
+#enquiry .map-actions{display:flex;gap:10px;flex-wrap:wrap}
+#enquiry .map-actions .btn{font:600 11px Inter,sans-serif;letter-spacing:.04em;padding:11px 14px}
+#enquiry .checkline{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}
+#enquiry .checkline input{width:17px;min-height:17px;margin-top:3px;accent-color:#22c7ff}
+#enquiry .request-preview{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.18);font-size:13px;color:var(--muted)}
+#enquiry .request-preview strong{color:var(--sky);display:block;margin-bottom:6px}
+#enquiry button{width:100%}
+#enquiry .hidden-field{display:none!important}
+@media(max-width:600px){#enquiry .field-grid{grid-template-columns:1fr}#enquiry .map-actions .btn{flex:1}}
+
 /* CONTACT: glitch heading, panels slide from opposite sides */
 #contact{background:radial-gradient(60% 70% at 50% 100%,rgba(30,91,255,.22),transparent 70%)}
 .glitch{position:relative}
@@ -200,6 +222,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
   .card,.proj,.why div,.ways,form,.hero h1 span{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}
   .why:before{transform:none!important}
 }
+
+/* THIVARA admin panel — same dark blue/cyan visual system as the public site */
+.admin-link{font:600 10px Orbitron,sans-serif;letter-spacing:.12em;color:var(--muted);text-decoration:none;opacity:.8}
+.admin-link:hover{color:var(--sky)}
+#adminOverlay{position:fixed;inset:0;z-index:500;display:none;overflow:auto;background:rgba(0,3,10,.92);backdrop-filter:blur(16px);padding:24px 14px}
+#adminOverlay.open{display:block}
+.admin-shell{width:min(900px,100%);margin:24px auto;background:linear-gradient(145deg,rgba(8,18,37,.98),rgba(2,7,17,.99));border:1px solid rgba(34,199,255,.28);border-radius:20px;box-shadow:0 20px 90px rgba(0,0,0,.55),0 0 40px rgba(30,91,255,.12);overflow:hidden}
+.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 24px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(30,91,255,.13),rgba(34,199,255,.04))}
+.admin-head h2{font:700 16px Orbitron,sans-serif;letter-spacing:.06em}.admin-head p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.admin-body{padding:24px;display:grid;gap:18px}.admin-panel{border:1px solid var(--line);background:rgba(3,10,22,.76);border-radius:14px;padding:20px}
+.admin-panel h3{font-size:18px;margin-bottom:8px}.admin-panel p{color:var(--muted);font-size:13px;margin:0 0 14px}
+.admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.admin-panel label{display:grid;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8c9e5}.admin-panel input,.admin-panel textarea,.admin-panel select{width:100%;min-width:0;background:#050c19;border:1px solid #193456;border-radius:9px;padding:12px;color:var(--silver);font:400 14px/1.5 Inter,system-ui,sans-serif}.admin-panel textarea{resize:vertical;min-height:105px}.admin-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.admin-actions .btn{cursor:pointer}.admin-status{font-size:13px;color:var(--sky);min-height:20px;overflow-wrap:anywhere}.admin-list{display:grid;gap:10px}.admin-project-row{display:flex;justify-content:space-between;align-items:start;gap:14px;border:1px solid var(--line);border-radius:10px;padding:13px}.admin-project-row h4{font:600 14px 'Space Grotesk',sans-serif;margin:0 0 3px}.admin-project-row p{margin:0;font-size:12px;overflow-wrap:anywhere}.admin-project-actions{display:flex;gap:7px;flex-shrink:0}.admin-mini{background:#08152a;border:1px solid #1d4168;color:var(--silver);border-radius:7px;padding:7px 10px;cursor:pointer;font:600 10px Orbitron,sans-serif}.admin-mini:hover{border-color:var(--sky);color:var(--sky)}.admin-close{background:transparent;border:1px solid #24405f;border-radius:9px;color:var(--silver);padding:8px 12px;cursor:pointer}.admin-note{border-left:2px solid var(--sky);padding:8px 12px;background:rgba(34,199,255,.05);font-size:12px;color:var(--muted)}
+@media(max-width:640px){.admin-head{padding:16px}.admin-body{padding:14px}.admin-panel{padding:14px}.admin-form-grid{grid-template-columns:1fr}.admin-project-row{flex-direction:column}.admin-project-actions{width:100%}.admin-project-actions button{flex:1}}
+
 </style>
 <noscript><style>#loader{display:none!important}</style></noscript>
 </head>
@@ -208,7 +244,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 <canvas id="space" aria-hidden="true"></canvas><div id="bar"></div><div id="cur"><div class="rot"><i></i><i></i><i></i><i></i></div></div><div id="dot"></div><div id="lbl">LOCK</div>
 <header><div class="wrap nav">
   <a class="brand" href="#top" aria-label="THIVARA Solutions home"><span class="mark" role="img" aria-label="THIVARA logo"></span><span>THIVARA <span class="grad">SOLUTIONS</span></span></a>
-  <nav aria-label="Main"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#why">Why us</a><a class="btn line quote-btn" href="#contact">GET A QUOTE</a></nav>
+  <nav aria-label="Main"><a href="#services">Services</a><a href="#projects">Projects</a><a href="#why">Why us</a><a class="btn line quote-btn" href="#contact">BOOK IT SUPPORT</a></nav>
 </div></header>
 
 <main id="top">
@@ -218,7 +254,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
       <h1><span>Intelligence.</span><span class="grad">Innovation.</span><span>Impact.</span></h1>
       <div class="type" id="type" aria-hidden="true"></div>
       <p>THIVARA Solutions builds websites, AI tools and smart systems, and keeps your computers and networks running, for shops, colleges and startups.</p>
-      <div class="row"><a class="btn" href="#contact">START A PROJECT</a><a class="btn line" href="#services">OUR SERVICES</a></div>
+      <div class="row"><a class="btn" href="#contact">BOOK DOORSTEP SUPPORT</a><a class="btn line" href="#services">OUR SERVICES</a></div><p class="hero-promise"><span>⌖</span> IT support at your home or office, with remote support also available. Visits are confirmed based on your location and technician availability.</p>
     </div>
     <div class="logo3d" id="logo3d"><div class="stage"><div class="aura"></div><div class="ring"></div><div class="ring b"></div><div class="orbit o1"><i></i></div><div class="orbit o2"><i></i></div><div class="glass"></div><div class="img" role="img" aria-label="THIVARA Solutions logo"></div></div></div>
   </div>
@@ -276,17 +312,51 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
         <a class="way" href="https://www.instagram.com/thivarasolutions?mdxt=MXR4NGt3M2g2eWRyMQ==" target="_blank" rel="noopener noreferrer"><small>INSTAGRAM</small><b>@thivarasolutions</b></a>
       </div>
       <form id="enquiry">
-        <label>Your name<input name="name" required autocomplete="name"></label>
-        <label>Service needed<select name="service"><option>Web development</option><option>AI solutions</option><option>IT support and PC building</option><option>Networking</option><option>IoT and embedded systems</option><option>Not sure yet</option></select></label>
-        <label>Project details<textarea name="details" required></textarea></label>
-        <label>Send via<select name="channel"><option value="whatsapp">WhatsApp</option><option value="gmail">Gmail</option></select></label>
-        <button class="btn" type="submit">SEND MESSAGE</button>
+        <div class="form-intro"><strong>Tell us what you need.</strong><span>Build a complete service request in under two minutes. No need to write a formal message yourself.</span></div>
+        <div class="step-label"><span>1</span> CHOOSE YOUR SERVICE</div>
+        <label>Service category<select name="category" id="serviceCategory" required>
+          <option value="Computer & Laptop Support">Computer & Laptop Support</option><option value="Networking & Wi-Fi">Networking & Wi-Fi</option><option value="Printer & Peripheral Support">Printer & Peripheral Support</option><option value="CCTV & Security">CCTV & Security</option><option value="Server, Cloud & IT Infrastructure">Server, Cloud & IT Infrastructure</option><option value="Website, Software & AI">Website, Software & AI</option><option value="Business & Office IT Support">Business & Office IT Support</option><option value="IoT & Embedded Systems">IoT & Embedded Systems</option><option value="Other IT Services">Other IT Services</option>
+        </select></label>
+        <label>Specific service<select name="service" id="specificService" required></select></label>
+        <div class="field-grid">
+          <label>How should we help?<select name="serviceMode" id="serviceMode"><option>Doorstep visit (home / office)</option><option>Remote support</option><option>Consultation / quotation only</option></select></label>
+          <label>How soon?<select name="urgency"><option>As soon as possible</option><option>Today (subject to availability)</option><option>Within 2–3 days</option><option>Flexible schedule</option></select></label>
+        </div>
+        <div class="step-label"><span>2</span> EXPLAIN THE REQUIREMENT</div>
+        <label id="deviceField">Device type<select name="device"><option>Laptop</option><option>Desktop PC</option><option>All-in-one PC</option><option>Multiple devices</option><option>Other / not sure</option></select></label>
+        <div class="field-grid">
+          <label>Brand / model (optional)<input name="deviceModel" placeholder="e.g. HP Pavilion, Dell OptiPlex"></label>
+          <label>Budget / quotation<select name="budget"><option>Please provide a quotation</option><option>Under ₹1,000</option><option>₹1,000–₹3,000</option><option>₹3,000–₹10,000</option><option>₹10,000+</option><option>Not sure yet</option></select></label>
+        </div>
+        <label>Problem or project details<textarea name="details" required placeholder="Describe the issue, what you want built, any error message, number of systems, or other useful details..."></textarea></label>
+        <label>Attach a public file link (optional)<input name="attachmentLink" type="url" placeholder="Google Drive / photo link (if available)"></label>
+        <div class="step-label"><span>3</span> YOUR CONTACT DETAILS</div>
+        <div class="field-grid">
+          <label>Full name<input name="name" required autocomplete="name" placeholder="Your name"></label>
+          <label>Mobile / WhatsApp number<input name="phone" type="tel" required autocomplete="tel" placeholder="+91 XXXXX XXXXX"></label>
+        </div>
+        <label>Email address (optional)<input name="email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+        <div id="locationFields">
+          <div class="step-label"><span>4</span> DOORSTEP SERVICE LOCATION</div>
+          <p class="hint">Doorstep visits are subject to service-area coverage and appointment confirmation. Share a location only if you want an on-site visit.</p>
+          <label>Full address<input name="address" id="serviceAddress" autocomplete="street-address" placeholder="Door / flat, street, area, city, PIN code"></label>
+          <label>Google Maps link (optional)<input name="mapLink" id="mapLink" type="url" placeholder="Paste a Google Maps share link or use the buttons below"></label>
+          <div class="map-actions"><a class="btn line" href="https://maps.google.com/" target="_blank" rel="noopener">⌖ OPEN GOOGLE MAPS</a><button class="btn line" type="button" id="useLocation">USE MY CURRENT LOCATION</button></div>
+          <p class="hint" id="locationStatus" aria-live="polite">Your browser will ask permission before accessing your current location.</p>
+          <label>Preferred visit date / time (optional)<input name="preferredTime" placeholder="e.g. Tomorrow after 4 PM"></label>
+        </div>
+        <div class="step-label"><span>5</span> SEND YOUR REQUEST</div>
+        <label>Contact method<select name="channel"><option value="whatsapp">WhatsApp message</option><option value="gmail">Email (Gmail composer)</option></select></label>
+        <div class="request-preview"><strong>YOUR REQUEST INCLUDES</strong><span id="requestPreview">Selected service, contact details, issue description, and doorstep location when applicable.</span></div>
+        <label class="checkline"><input type="checkbox" name="consent" required><span>I agree to share the information entered here with THIVARA Solutions so the team can respond to my service enquiry.</span></label>
+        <button class="btn" type="submit">GENERATE MY SERVICE REQUEST ↗</button>
+        <p class="hint">This opens WhatsApp or Gmail with your request already filled in. You review it and press Send. No message is sent automatically.</p>
       </form>
     </div>
   </div>
 </section>
 </main>
-<footer><div class="wrap"><span>© 2026 THIVARA Solutions</span><span>Intelligence. Innovation. Impact.</span></div></footer>
+<footer><div class="wrap"><span>© 2026 THIVARA Solutions</span><span>Intelligence. Innovation. Impact.</span><a class="admin-link" href="#admin" id="openAdmin">ADMIN LOGIN</a></div></footer>
 
 <script>
 (function(){
@@ -348,11 +418,92 @@ if(rm){draw(0)}else{
   addEventListener('mousemove',function(e){tx=e.clientX/W-.5;ty=e.clientY/H-.5});
   (function loop(t){pmx+=(tx-pmx)*.05;pmy+=(ty-pmy)*.05;draw(t);requestAnimationFrame(loop)})(0);
 }
-/* enquiry */
-document.getElementById('enquiry').addEventListener('submit',function(e){e.preventDefault();var f=new FormData(e.target),message='Hello THIVARA Solutions,\nName: '+f.get('name')+'\nService: '+f.get('service')+'\nDetails: '+f.get('details');
-  var url=f.get('channel')==='gmail'?'https://mail.google.com/mail/?view=cm&fs=1&to=thivarasolutions@gmail.com&su='+encodeURIComponent('Project enquiry')+'&body='+encodeURIComponent(message):'https://wa.me/919445982865?text='+encodeURIComponent(message);
-  window.open(url,'_blank','noopener')});
+/* Smart service request: category-specific options, map location and structured message */
+var requestForm=document.getElementById('enquiry'),categorySelect=document.getElementById('serviceCategory'),serviceSelect=document.getElementById('specificService'),modeSelect=document.getElementById('serviceMode'),locationFields=document.getElementById('locationFields'),deviceField=document.getElementById('deviceField'),preview=document.getElementById('requestPreview');
+var serviceCatalog={
+ 'Computer & Laptop Support':['Laptop repair','Desktop PC repair','Windows installation','SSD / RAM upgrade','Virus and malware removal','Data recovery','Custom PC assembly','Computer running slow','Other computer issue'],
+ 'Networking & Wi-Fi':['Wi-Fi troubleshooting','Router configuration','LAN cabling','Office network setup','Network troubleshooting','Switch configuration','Other networking requirement'],
+ 'Printer & Peripheral Support':['Printer installation','Printer repair','Scanner setup','Peripheral troubleshooting','Other printer / peripheral issue'],
+ 'CCTV & Security':['CCTV installation','CCTV troubleshooting','DVR / NVR configuration','Remote viewing setup','Other CCTV requirement'],
+ 'Server, Cloud & IT Infrastructure':['Server setup','Windows Server support','Linux administration','Cloud setup','Backup configuration','IT infrastructure support','Other server / cloud requirement'],
+ 'Website, Software & AI':['Business website development','Website redesign','Website maintenance','E-commerce website','AI chatbot integration','Business workflow automation','Custom software development','Domain / hosting support','Other web / AI requirement'],
+ 'Business & Office IT Support':['Annual IT maintenance','Office computer maintenance','New office IT setup','IT support consultation','Bulk computer deployment','Other office IT requirement'],
+ 'IoT & Embedded Systems':['ESP32 / microcontroller project','Sensor integration','IoT prototype development','Embedded troubleshooting','Smart monitoring / automation','Other IoT requirement'],
+ 'Other IT Services':['Other IT service']
+};
+function updateServices(){var list=serviceCatalog[categorySelect.value]||['Other IT service'];serviceSelect.innerHTML='';list.forEach(function(item){var o=document.createElement('option');o.value=item;o.textContent=item;serviceSelect.appendChild(o)});deviceField.classList.toggle('hidden-field',categorySelect.value!=='Computer & Laptop Support');updatePreview()}
+function updateLocationVisibility(){var isDoorstep=modeSelect.value.indexOf('Doorstep')===0;locationFields.classList.toggle('hidden-field',!isDoorstep);document.getElementById('serviceAddress').required=isDoorstep;updatePreview()}
+function updatePreview(){var f=new FormData(requestForm);var fields=[f.get('category'),f.get('service'),f.get('serviceMode'),f.get('name'),f.get('phone'),f.get('details')].filter(Boolean);preview.textContent=fields.slice(0,3).join(' • ')+'. Your contact details, requirements'+(modeSelect.value.indexOf('Doorstep')===0?', address and Google Maps link':'')+' will be included in the final request.'}
+categorySelect.addEventListener('change',updateServices);serviceSelect.addEventListener('change',updatePreview);modeSelect.addEventListener('change',updateLocationVisibility);requestForm.addEventListener('input',updatePreview);
+document.getElementById('useLocation').addEventListener('click',function(){var status=document.getElementById('locationStatus');if(!navigator.geolocation){status.textContent='Location access is not supported by this browser. Please enter your address or paste a Maps link.';return}status.textContent='Requesting location permission…';navigator.geolocation.getCurrentPosition(function(pos){var lat=pos.coords.latitude.toFixed(6),lng=pos.coords.longitude.toFixed(6);document.getElementById('mapLink').value='https://www.google.com/maps?q='+lat+','+lng;status.textContent='Location link created from your coordinates. Please add your full address for accurate doorstep service.';updatePreview()},function(err){status.textContent=err.code===1?'Location permission was denied. Enter your address or paste a Google Maps link instead.':'Could not get your location. Please enter your address or paste a Google Maps link.'},{enableHighAccuracy:true,timeout:12000,maximumAge:60000})});
+updateServices();updateLocationVisibility();
+requestForm.addEventListener('submit',function(e){e.preventDefault();var f=new FormData(requestForm);if(modeSelect.value.indexOf('Doorstep')===0&&!String(f.get('address')||'').trim()){document.getElementById('serviceAddress').focus();document.getElementById('locationStatus').textContent='Please enter the full doorstep address. A Maps link alone may not identify the exact entrance.';return}
+ var message='THIVARA SOLUTIONS — SERVICE REQUEST\n'+'================================\n'+'Customer name: '+f.get('name')+'\n'+'Mobile / WhatsApp: '+f.get('phone')+'\n'+'Email: '+(f.get('email')||'Not provided')+'\n\n'+'SERVICE DETAILS\n'+'Category: '+f.get('category')+'\n'+'Selected service: '+f.get('service')+'\n'+'Service mode: '+f.get('serviceMode')+'\n'+'Urgency: '+f.get('urgency')+'\n'+'Device type: '+(f.get('device')||'Not applicable')+'\n'+'Brand / model: '+(f.get('deviceModel')||'Not provided')+'\n'+'Budget: '+f.get('budget')+'\n'+'Requirements / issue: '+f.get('details')+'\n'+'Attachment link: '+(f.get('attachmentLink')||'Not provided')+'\n\n'+'DOORSTEP LOCATION\n'+'Address: '+(f.get('address')||'Not applicable — remote / consultation')+'\n'+'Google Maps: '+(f.get('mapLink')||'Not provided')+'\n'+'Preferred visit: '+(f.get('preferredTime')||'Not specified')+'\n\n'+'Please review my request and confirm service availability, any visit / inspection charges, and the quotation.\n\nSubmitted via thivarasolutions.in';
+ var url=f.get('channel')==='gmail'?'https://mail.google.com/mail/?view=cm&fs=1&to=thivarasolutions@gmail.com&su='+encodeURIComponent('Service Request | '+f.get('service'))+'&body='+encodeURIComponent(message):'https://wa.me/919445982865?text='+encodeURIComponent(message);
+ var win=window.open(url,'_blank','noopener');if(!win)window.location.href=url});
 })();
 </script>
+
+<div id="adminOverlay" aria-hidden="true">
+  <div class="admin-shell" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="admin-head"><div><h2 id="adminTitle">THIVARA <span class="grad">ADMIN CONSOLE</span></h2><p>Project content management · Secure cloud sign-in</p></div><button class="admin-close" id="closeAdmin" type="button">CLOSE ✕</button></div>
+    <div class="admin-body">
+      <div class="admin-panel" id="adminLoginPanel">
+        <h3>Admin login</h3><p>Sign in with the admin email and password created in your Supabase project.</p>
+        <form id="adminLoginForm"><div class="admin-form-grid"><label>Admin email<input id="adminEmail" type="email" autocomplete="username" required placeholder="admin@yourcompany.in"></label><label>Password<input id="adminPassword" type="password" autocomplete="current-password" required placeholder="Enter your password"></label></div><div class="admin-actions"><button class="btn" type="submit">SIGN IN ↗</button></div></form>
+        <p class="admin-status" id="adminLoginStatus" role="status"></p>
+        <div class="admin-note">Security note: login credentials are not embedded in this HTML. The admin account is managed by Supabase Authentication.</div>
+      </div>
+      <div id="adminManager" hidden>
+        <div class="admin-panel"><h3 id="projectFormTitle">Add project details</h3><p>Text only. Publish projects to make them appear in the website's Projects section.</p>
+          <form id="adminProjectForm"><input type="hidden" id="projectId"><div class="admin-form-grid">
+            <label>Project title<input id="projectTitle" maxlength="100" required placeholder="e.g. College Gate Scanner"></label>
+            <label>Category<select id="projectCategory"><option>Web Development</option><option>AI Solutions</option><option>DevOps & Cloud</option><option>IT Support</option><option>Networking</option><option>IoT & Embedded Systems</option><option>Automation</option><option>Other</option></select></label>
+            <label>Technologies used<input id="projectTech" maxlength="250" placeholder="HTML, JavaScript, Supabase"></label>
+            <label>Live project URL (optional)<input id="projectUrl" type="url" placeholder="https://example.com"></label>
+          </div><label style="margin-top:14px">Project description<textarea id="projectDescription" maxlength="2000" required placeholder="Explain what the project does and the problem it solves."></textarea></label>
+          <div class="admin-actions"><button class="btn" id="saveProjectBtn" type="submit">PUBLISH PROJECT ↗</button><button class="btn line" id="resetProjectForm" type="button">CLEAR FORM</button><button class="btn line" id="signOutAdmin" type="button">SIGN OUT</button></div><p class="admin-status" id="projectStatus" role="status"></p>
+        </form></div>
+        <div class="admin-panel"><h3>Your published projects</h3><p>Edit or delete the text details at any time. Changes update the public project list automatically.</p><div class="admin-list" id="adminProjectList"><p>Loading projects…</p></div></div>
+      </div>
+      <div class="admin-status" id="adminConfigStatus" role="status"></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+  // Add your Supabase project URL and anon/public key here after creating the project.
+  // Never put a service_role key or database password in browser code.
+  var SUPABASE_URL = 'https://zbkkhhrmbquxnmowhglf.supabase.co';
+  var SUPABASE_ANON_KEY = 'sb_publishable_h3eXqMIXg7JDpKV-P6hI4A_JuZEXvbN';
+  var overlay=document.getElementById('adminOverlay'),loginPanel=document.getElementById('adminLoginPanel'),manager=document.getElementById('adminManager');
+  var loginStatus=document.getElementById('adminLoginStatus'),projectStatus=document.getElementById('projectStatus'),configStatus=document.getElementById('adminConfigStatus'),projectList=document.getElementById('adminProjectList'),projectForm=document.getElementById('adminProjectForm');
+  var client=null,editingId=null;
+  function openPanel(e){if(e)e.preventDefault();overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';if(!configured()){configStatus.textContent='Setup required: add your Supabase project URL and anon key in this file, then redeploy.';}else{configStatus.textContent='';initClient();checkSession();}}
+  function closePanel(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  function configured(){return SUPABASE_URL.indexOf('https://')===0&&SUPABASE_ANON_KEY.length>20&&window.supabase&&window.supabase.createClient;}
+  function initClient(){if(!client&&configured())client=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);}
+  async function checkSession(){if(!client)return;var r=await client.auth.getSession();if(r.data&&r.data.session)showManager();else showLogin();}
+  function showLogin(){loginPanel.hidden=false;manager.hidden=true;}
+  function showManager(){loginPanel.hidden=true;manager.hidden=false;loadProjects();}
+  function say(el,msg){el.textContent=msg||'';}
+  document.getElementById('openAdmin').addEventListener('click',openPanel);
+  document.getElementById('closeAdmin').addEventListener('click',closePanel);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)closePanel()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('open'))closePanel()});
+  document.getElementById('adminLoginForm').addEventListener('submit',async function(e){e.preventDefault();say(loginStatus,'Signing in…');if(!configured()){say(loginStatus,'Supabase is not configured yet. Follow the setup instructions included with the download.');return;}initClient();var r=await client.auth.signInWithPassword({email:document.getElementById('adminEmail').value.trim(),password:document.getElementById('adminPassword').value});if(r.error){say(loginStatus,r.error.message);return;}say(loginStatus,'');showManager();});
+  document.getElementById('signOutAdmin').addEventListener('click',async function(){if(client)await client.auth.signOut();projectForm.reset();document.getElementById('projectId').value='';showLogin();say(loginStatus,'You have signed out.');});
+  function resetForm(){projectForm.reset();document.getElementById('projectId').value='';document.getElementById('projectFormTitle').textContent='Add project details';document.getElementById('saveProjectBtn').textContent='PUBLISH PROJECT ↗';say(projectStatus,'');editingId=null;}
+  document.getElementById('resetProjectForm').addEventListener('click',resetForm);
+  projectForm.addEventListener('submit',async function(e){e.preventDefault();if(!client)return;say(projectStatus,'Saving project…');var record={title:document.getElementById('projectTitle').value.trim(),category:document.getElementById('projectCategory').value,technologies:document.getElementById('projectTech').value.trim(),project_url:document.getElementById('projectUrl').value.trim()||null,description:document.getElementById('projectDescription').value.trim(),published:true};var id=document.getElementById('projectId').value;var q=id?client.from('portfolio_projects').update(record).eq('id',id):client.from('portfolio_projects').insert(record);var r=await q;if(r.error){say(projectStatus,'Could not save: '+r.error.message);return;}say(projectStatus,'Saved and published successfully.');resetForm();await loadProjects();await loadPublicProjects();});
+  async function loadProjects(){if(!client)return;projectList.textContent='Loading…';var r=await client.from('portfolio_projects').select('*').order('created_at',{ascending:false});if(r.error){projectList.textContent='Could not load projects: '+r.error.message;return;}projectList.replaceChildren();if(!r.data.length){projectList.textContent='No projects added yet. Use the form above to publish your first project.';return;}r.data.forEach(function(p){var row=document.createElement('div');row.className='admin-project-row';var details=document.createElement('div');var h=document.createElement('h4');h.textContent=p.title;var d=document.createElement('p');d.textContent=(p.category||'Other')+' · '+(p.technologies||'Technologies not specified');var desc=document.createElement('p');desc.textContent=p.description;details.append(h,d,desc);var actions=document.createElement('div');actions.className='admin-project-actions';var edit=document.createElement('button');edit.type='button';edit.className='admin-mini';edit.textContent='EDIT';edit.addEventListener('click',function(){document.getElementById('projectId').value=p.id;document.getElementById('projectTitle').value=p.title||'';document.getElementById('projectCategory').value=p.category||'Other';document.getElementById('projectTech').value=p.technologies||'';document.getElementById('projectUrl').value=p.project_url||'';document.getElementById('projectDescription').value=p.description||'';document.getElementById('projectFormTitle').textContent='Edit project';document.getElementById('saveProjectBtn').textContent='SAVE CHANGES ↗';say(projectStatus,'Editing: '+p.title);document.getElementById('projectFormTitle').scrollIntoView({behavior:'smooth',block:'center'});});var del=document.createElement('button');del.type='button';del.className='admin-mini';del.textContent='DELETE';del.addEventListener('click',async function(){if(!confirm('Delete project “'+p.title+'”? This cannot be undone.'))return;var x=await client.from('portfolio_projects').delete().eq('id',p.id);if(x.error){say(projectStatus,'Could not delete: '+x.error.message);return;}say(projectStatus,'Project deleted.');await loadProjects();await loadPublicProjects();});actions.append(edit,del);row.append(details,actions);projectList.append(row);});}
+  async function loadPublicProjects(){if(!configured())return;initClient();var r=await client.from('portfolio_projects').select('id,title,category,description,technologies,project_url').eq('published',true).order('created_at',{ascending:false});if(r.error)return;var grid=document.querySelector('#projects .grid');if(!grid)return;grid.querySelectorAll('[data-cloud-project="true"]').forEach(function(el){el.remove()});(r.data||[]).forEach(function(p){var card=document.createElement('div');card.className='proj';card.dataset.cloudProject='true';var h=document.createElement('h3');h.textContent=p.title;var d=document.createElement('p');d.textContent=p.description;var tag=document.createElement('span');tag.className='tag';tag.textContent=(p.category||'PROJECT').toUpperCase();card.append(h,d,tag);if(p.technologies){var tech=document.createElement('p');tech.style.fontSize='12px';tech.style.color='var(--muted)';tech.textContent='TECH: '+p.technologies;card.append(tech);}if(p.project_url){var a=document.createElement('a');a.href=p.project_url;a.target='_blank';a.rel='noopener noreferrer';a.className='btn line';a.style.marginTop='10px';a.textContent='VIEW PROJECT ↗';card.append(a);}grid.append(card);});}
+  if(configured()){initClient();loadPublicProjects();}
+  // If user opened #admin directly, open the same panel.
+  if(location.hash==='#admin')openPanel();
+})();
+</script>
+
 </body>
 </html>
