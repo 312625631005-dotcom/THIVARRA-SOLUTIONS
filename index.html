@@ -236,6 +236,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.admin-panel label{display:grid;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#b8c9e5}.admin-panel input,.admin-panel textarea,.admin-panel select{width:100%;min-width:0;background:#050c19;border:1px solid #193456;border-radius:9px;padding:12px;color:var(--silver);font:400 14px/1.5 Inter,system-ui,sans-serif}.admin-panel textarea{resize:vertical;min-height:105px}.admin-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.admin-actions .btn{cursor:pointer}.admin-status{font-size:13px;color:var(--sky);min-height:20px;overflow-wrap:anywhere}.admin-list{display:grid;gap:10px}.admin-project-row{display:flex;justify-content:space-between;align-items:start;gap:14px;border:1px solid var(--line);border-radius:10px;padding:13px}.admin-project-row h4{font:600 14px 'Space Grotesk',sans-serif;margin:0 0 3px}.admin-project-row p{margin:0;font-size:12px;overflow-wrap:anywhere}.admin-project-actions{display:flex;gap:7px;flex-shrink:0}.admin-mini{background:#08152a;border:1px solid #1d4168;color:var(--silver);border-radius:7px;padding:7px 10px;cursor:pointer;font:600 10px Orbitron,sans-serif}.admin-mini:hover{border-color:var(--sky);color:var(--sky)}.admin-close{background:transparent;border:1px solid #24405f;border-radius:9px;color:var(--silver);padding:8px 12px;cursor:pointer}.admin-note{border-left:2px solid var(--sky);padding:8px 12px;background:rgba(34,199,255,.05);font-size:12px;color:var(--muted)}
 @media(max-width:640px){.admin-head{padding:16px}.admin-body{padding:14px}.admin-panel{padding:14px}.admin-form-grid{grid-template-columns:1fr}.admin-project-row{flex-direction:column}.admin-project-actions{width:100%}.admin-project-actions button{flex:1}}
 
+
+/* Fix admin login/project forms: the public contact-form reveal animation must not hide them. */
+#adminOverlay form {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  padding: 0;
+  background: none;
+  border: 0;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+  border-radius: 0;
+}
 </style>
 <noscript><style>#loader{display:none!important}</style></noscript>
 </head>
