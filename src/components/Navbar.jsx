@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white md:hidden"
+          className="-mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white sm:mr-0 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
