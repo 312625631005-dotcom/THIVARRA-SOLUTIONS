@@ -28,14 +28,14 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="wrap nav">
+      <div className="wrap flex min-h-[72px] items-center justify-between">
         <a
           href="#top"
-          className="brand flex items-center gap-3 text-decoration-none"
+          className="brand flex shrink-0 items-center gap-2 text-decoration-none sm:gap-3"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <span className="mark" style={{ width: '56px', height: '43px', backgroundImage: 'var(--logo)', backgroundPosition: '-16px -10px', backgroundSize: '87px auto', backgroundRepeat: 'no-repeat', display: 'inline-block' }} role="img" aria-label="THIVARA logo" />
-          <span className="font-orbitron font-bold text-lg tracking-wider">THIVARA <span className="grad">SOLUTIONS</span></span>
+          <span className="whitespace-nowrap font-orbitron text-[clamp(0.75rem,4.2vw,1.125rem)] font-bold tracking-wider">THIVARA <span className="grad">SOLUTIONS</span></span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -57,9 +57,11 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-white"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white md:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -71,6 +73,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            id="mobile-navigation"
             className="md:hidden bg-panel/95 backdrop-blur-[20px] border-b border-white/10"
           >
             <div className="px-6 py-6 space-y-4">
