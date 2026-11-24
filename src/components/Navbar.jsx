@@ -28,7 +28,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="wrap flex min-h-[72px] items-center justify-between">
+      <div className="wrap flex min-h-[72px] items-center justify-between pr-2 sm:pr-6">
         <a
           href="#top"
           className="brand flex shrink-0 items-center gap-2 text-decoration-none sm:gap-3"
@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="-mr-4 flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white sm:mr-0 md:hidden"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white md:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
