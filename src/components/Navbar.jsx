@@ -28,7 +28,7 @@ export default function Navbar() {
           : 'bg-transparent'
       }`}
     >
-      <div className="wrap nav">
+      <div className="wrap nav flex items-center justify-between">
         <a
           href="#top"
           className="brand flex items-center gap-3 text-decoration-none"
